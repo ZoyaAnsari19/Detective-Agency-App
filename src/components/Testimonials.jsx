@@ -168,7 +168,8 @@ const Testimonials = () => {
       </span>
     ));
   };
-
+  
+  // jsx structure
   return (
     <section className="testimonials" id="testimonials" ref={testimonialsRef}>
       <div className="container">
