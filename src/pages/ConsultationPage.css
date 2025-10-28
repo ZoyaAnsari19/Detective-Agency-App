@@ -1,0 +1,563 @@
+/* Full Page Container */
+.consultation-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  padding: clamp(20px, 3vw, 40px) clamp(10px, 2vw, 20px);
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Back Button */
+.back-button {
+  position: fixed;
+  top: clamp(15px, 3vw, 30px);
+  left: clamp(15px, 3vw, 30px);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  padding: clamp(8px, 2vw, 12px) clamp(15px, 3vw, 28px);
+  border-radius: 50px;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: clamp(5px, 1vw, 10px);
+  box-sizing: border-box;
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateX(-5px);
+}
+
+.back-button i {
+  font-size: 14px;
+}
+
+/* Page Container */
+.page-container {
+  max-width: clamp(300px, 90vw, 1200px);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - clamp(60px, 8vw, 80px));
+  padding-top: clamp(30px, 5vw, 60px);
+  box-sizing: border-box;
+}
+
+/* Consultation Wrapper */
+.consultation-wrapper {
+  width: 100%;
+  max-width: 800px;
+  animation: fadeInUp 0.6s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Consultation Container */
+.consultation-container {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: clamp(20px, 4vw, 60px) clamp(15px, 3vw, 50px);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+}
+
+/* Form Header */
+.form-header {
+  margin-bottom: 45px;
+}
+
+.header-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.label-line {
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, #e91e63, #9c27b0);
+  border-radius: 2px;
+}
+
+.label-text {
+  color: #e91e63;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+.form-title {
+  font-size: clamp(1.8rem, 5vw, 3.5rem);
+  font-weight: 800;
+  background: linear-gradient(135deg, #1a1a2e, #0f3460);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.15;
+  margin: 0 0 20px 0;
+}
+
+.form-subtitle {
+  font-size: clamp(0.85rem, 2vw, 1rem);
+  color: #64748b;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Form Styles */
+.consultation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.form-group {
+  width: 100%;
+}
+
+.form-group label {
+  display: flex;
+  align-items: center;
+  gap: clamp(5px, 1vw, 8px);
+  font-weight: 600;
+  font-size: clamp(0.8rem, 2vw, 0.95rem);
+  color: #1e293b;
+  margin-bottom: 10px;
+}
+
+.form-group label i {
+  color: #e91e63;
+  font-size: 14px;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: clamp(12px, 2vw, 16px) clamp(15px, 3vw, 20px);
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: clamp(0.85rem, 2vw, 0.95rem);
+  color: #1e293b;
+  background-color: #f8fafc;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: #94a3b8;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #e91e63;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(233, 30, 99, 0.1);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: clamp(100px, 10vh, 140px);
+  line-height: 1.6;
+}
+
+/* Submit Button */
+.submit-button {
+  background: linear-gradient(135deg, #e91e63, #9c27b0);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: clamp(0.9rem, 2vw, 1.05rem);
+  padding: clamp(14px, 2vw, 18px) clamp(25px, 4vw, 40px);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(8px, 2vw, 12px);
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(233, 30, 99, 0.4);
+  align-self: flex-start;
+  margin-top: 15px;
+  box-sizing: border-box;
+}
+
+.submit-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(233, 30, 99, 0.5);
+}
+
+.submit-button:active {
+  transform: translateY(-1px);
+}
+
+.submit-button i {
+  font-size: 16px;
+}
+
+/* Privacy Note */
+.privacy-note {
+  display: flex;
+  align-items: flex-start;
+  gap: clamp(8px, 2vw, 12px);
+  padding: clamp(15px, 3vw, 20px);
+  background: #f0fdf4;
+  border-left: 4px solid #22c55e;
+  border-radius: 8px;
+  margin-top: 10px;
+  box-sizing: border-box;
+}
+
+.privacy-note i {
+  color: #22c55e;
+  font-size: 18px;
+  margin-top: 2px;
+}
+
+.privacy-note p {
+  font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+  color: #166534;
+  margin: 0;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+/* Contact Info Box */
+.contact-info-box {
+  margin-top: clamp(20px, 4vw, 40px);
+  padding: clamp(20px, 3vw, 30px);
+  background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+  border-radius: 12px;
+  border: 2px solid #e2e8f0;
+  box-sizing: border-box;
+}
+
+.contact-info-box h3 {
+  font-size: clamp(1.1rem, 2.5vw, 1.25rem);
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 20px 0;
+}
+
+.quick-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: clamp(8px, 2vw, 12px);
+  font-size: clamp(0.8rem, 2vw, 0.95rem);
+  color: #475569;
+  font-weight: 500;
+}
+
+.contact-item i {
+  color: #e91e63;
+  font-size: 18px;
+  width: 24px;
+  text-align: center;
+}
+
+/* Extra Large Screens (1440px and above) */
+@media (min-width: 1440px) {
+  .consultation-page {
+    padding: 50px 30px;
+  }
+
+  .page-container {
+    padding-top: 70px;
+  }
+
+  .consultation-container {
+    padding: 70px 60px;
+  }
+
+  .form-title {
+    font-size: 3.8rem;
+  }
+  
+  .submit-button {
+    font-size: 1.1rem;
+    padding: 20px 45px;
+  }
+}
+
+/* Large Desktops (1200px to 1439px) */
+@media (max-width: 1439px) and (min-width: 1200px) {
+  .consultation-page {
+    padding: 40px 25px;
+  }
+
+  .page-container {
+    padding-top: 65px;
+  }
+
+  .consultation-container {
+    padding: 60px 55px;
+  }
+
+  .form-title {
+    font-size: 3.3rem;
+  }
+}
+
+/* Medium Desktops (992px to 1199px) */
+@media (max-width: 1199px) and (min-width: 992px) {
+  .consultation-page {
+    padding: 35px 22px;
+  }
+
+  .page-container {
+    padding-top: 60px;
+  }
+
+  .consultation-container {
+    padding: 50px 45px;
+  }
+
+  .form-title {
+    font-size: 2.9rem;
+  }
+  
+  .submit-button {
+    font-size: 1.05rem;
+    padding: 18px 42px;
+  }
+}
+
+/* Tablets (768px to 991px) */
+@media (max-width: 991px) and (min-width: 768px) {
+  .consultation-page {
+    padding: 30px 20px;
+  }
+
+  .page-container {
+    padding-top: 55px;
+  }
+
+  .consultation-container {
+    padding: 45px 40px;
+  }
+
+  .form-title {
+    font-size: 2.6rem;
+  }
+  
+  .submit-button {
+    font-size: 1rem;
+    padding: 17px 38px;
+  }
+}
+
+/* Small Tablets (576px to 767px) */
+@media (max-width: 767px) and (min-width: 576px) {
+  .back-button {
+    top: 20px;
+    left: 20px;
+    padding: 10px 24px;
+    font-size: 0.85rem;
+  }
+
+  .consultation-container {
+    padding: 40px 30px;
+  }
+
+  .form-title {
+    font-size: 2.3rem;
+  }
+
+  .submit-button {
+    width: 100%;
+    font-size: 0.95rem;
+    padding: 16px 35px;
+  }
+
+  .contact-info-box {
+    padding: 25px;
+  }
+  
+  .form-input,
+  .form-textarea {
+    font-size: 0.9rem;
+    padding: 15px 19px;
+  }
+}
+
+/* Mobile Phones (320px to 575px) */
+@media (max-width: 575px) {
+  .consultation-page {
+    padding: 20px 15px;
+  }
+
+  .back-button {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 8px 20px;
+    font-size: 0.8rem;
+  }
+
+  .page-container {
+    padding-top: 60px;
+  }
+
+  .consultation-container {
+    padding: 25px 15px;
+    border-radius: 16px;
+  }
+
+  .form-title {
+    font-size: 1.9rem;
+  }
+
+  .form-input,
+  .form-textarea {
+    font-size: 0.85rem;
+    padding: 12px 15px;
+  }
+
+  .submit-button {
+    font-size: 0.9rem;
+    padding: 14px 28px;
+    width: 100%;
+  }
+
+  .contact-info-box {
+    padding: 20px;
+    margin-top: 30px;
+  }
+
+  .contact-info-box h3 {
+    font-size: 1.1rem;
+  }
+  
+  .privacy-note {
+    gap: 8px;
+    padding: 15px;
+  }
+  
+  .privacy-note p {
+    font-size: 0.8rem;
+  }
+}
+
+/* Extra Small Phones (below 320px) */
+@media (max-width: 319px) {
+  .consultation-page {
+    padding: 15px 10px;
+  }
+
+  .back-button {
+    top: 10px;
+    left: 10px;
+    padding: 6px 15px;
+    font-size: 0.7rem;
+  }
+
+  .page-container {
+    padding-top: 50px;
+  }
+
+  .consultation-container {
+    padding: 20px 10px;
+    border-radius: 12px;
+  }
+
+  .form-title {
+    font-size: 1.6rem;
+  }
+
+  .form-input,
+  .form-textarea {
+    font-size: 0.8rem;
+    padding: 10px 12px;
+  }
+
+  .submit-button {
+    font-size: 0.8rem;
+    padding: 12px 22px;
+  }
+
+  .contact-info-box {
+    padding: 15px;
+    margin-top: 20px;
+  }
+
+  .contact-info-box h3 {
+    font-size: 1rem;
+  }
+  
+  .privacy-note {
+    gap: 6px;
+    padding: 12px;
+  }
+  
+  .privacy-note p {
+    font-size: 0.75rem;
+  }
+}
+
+/* Large Screens (4K and above) */
+@media (min-width: 2560px) {
+  .consultation-page {
+    padding: 60px 40px;
+  }
+
+  .page-container {
+    padding-top: 80px;
+  }
+
+  .consultation-container {
+    padding: 80px 70px;
+  }
+
+  .form-title {
+    font-size: 4.5rem;
+  }
+  
+  .submit-button {
+    font-size: 1.2rem;
+    padding: 22px 50px;
+  }
+  
+  .form-input,
+  .form-textarea {
+    font-size: 1.1rem;
+    padding: 18px 22px;
+  }
+}
+
+/* Ultra-wide Screens */
+@media (min-width: 1920px) and (min-aspect-ratio: 21/9) {
+  .page-container {
+    max-width: 1400px;
+  }
+  
+  .consultation-container {
+    max-width: 900px;
+  }
+}
