@@ -51,7 +51,8 @@ const ConsultationPage = () => {
 
   return (
     <div className="consultation-page">
-      {/* Back Button */}
+      {/* Back Buttons */}
+
       <button className="back-button" onClick={handleGoBack}>
         <i className="fas fa-arrow-left"></i> Back to Home
       </button>
