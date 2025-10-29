@@ -1,0 +1,313 @@
+.cta-section {
+  position: relative;
+  padding: clamp(1.5rem, 3vw, 3rem) 0;
+  background-color: #0a192f;
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.cta-bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.15;
+}
+
+.cta-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(10, 25, 47, 0.85) 0%,
+    rgba(30, 41, 59, 0.80) 50%,
+    rgba(51, 65, 85, 0.85) 100%
+  );
+  z-index: 1;
+}
+
+.cta-content {
+  position: relative;
+  z-index: 2;
+  max-width: clamp(320px, 90%, 1200px);
+  margin: 0 auto;
+  padding: 0 clamp(0.5rem, 2vw, 1rem);
+  width: 100%;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(1.5rem, 3vw, 3rem);
+  align-items: start;
+}
+
+.cta-text {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1rem, 2vw, 1.5rem);
+  width: 100%;
+}
+
+.cta-title {
+  font-size: clamp(1.3rem, 3.5vw, 2.25rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 clamp(10px, 2vw, 15px) 0;
+  line-height: 1.3;
+}
+
+.cta-description {
+  font-size: clamp(0.8rem, 1.4vw, 1.1rem);
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.7;
+  margin: 0 0 clamp(15px, 2vw, 20px) 0;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(8px, 1.5vw, 12px);
+  background: rgba(15, 49, 145, 0.932);
+  color: #ffffff;
+  font-size: clamp(0.85rem, 1.6vw, 1rem);
+  font-weight: 700;
+  padding: clamp(12px, 1.8vw, 16px) clamp(20px, 3vw, 35px);
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(18, 50, 109, 0.541);
+  border: 2px solid transparent;
+  width: fit-content;
+  max-width: 100%;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  background: #f5f5f5;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(16, 43, 73, 0.6);
+  border: 1px solid rgba(5, 41, 88, 0.397);
+  color: rgba(15, 49, 145, 0.932);
+}
+
+.cta-button i {
+  font-size: clamp(14px, 1.8vw, 18px);
+}
+
+.cta-contact-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(0.75rem, 2vw, 1.5rem);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: clamp(0.75rem, 1.5vw, 1.25rem);
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.contact-card:hover {
+  background: rgba(6, 182, 212, 0.1);
+  border-color: rgba(6, 182, 212, 0.3);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(30, 68, 104, 0.2);
+}
+
+.card-icon {
+  width: clamp(45px, 7vw, 60px);
+  height: clamp(45px, 7vw, 60px);
+  background: linear-gradient(135deg, #06b6d4, #0891b2);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-right: clamp(0.75rem, 1.5vw, 1rem);
+  box-shadow: 0 5px 15px rgba(6, 182, 212, 0.3);
+}
+
+.card-icon i {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  color: #ffffff;
+}
+
+.card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.card-content h3 {
+  font-size: clamp(0.65rem, 1.3vw, 0.9rem);
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 0 3px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.contact-link {
+  font-size: clamp(0.9rem, 1.8vw, 1.2rem);
+  font-weight: 700;
+  color: #0cb1b1d2;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  word-break: break-word;
+}
+
+.contact-link:hover {
+  color: #06b6d4;
+}
+
+.cta-image-section {
+  position: relative;
+  height: clamp(200px, 40vw, 400px);
+  border-radius: 12px;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cta-image-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .cta-content {
+    grid-template-columns: 1fr;
+  }
+  .cta-image-section {
+    order: -1;
+    height: clamp(180px, 50vw, 300px);
+  }
+  .cta-section {
+    padding: clamp(20px, 4vw, 30px) 0;
+  }
+  .cta-contact-cards {
+    grid-template-columns: 1fr;
+  }
+  .contact-card {
+    padding: clamp(12px, 3vw, 16px);
+  }
+  .cta-button {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+@media (min-width: 640px) {
+  .cta-contact-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .cta-content {
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(2rem, 3vw, 3rem);
+    align-items: start;
+  }
+  .cta-image-section {
+    order: 1;
+  }
+  .cta-text {
+    order: 2;
+  }
+  .cta-button {
+    width: fit-content;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cta-contact-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1440px) {
+  .cta-content {
+    max-width: 1400px;
+  }
+  .cta-image-section {
+    height: 450px;
+  }
+  .cta-title {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+  }
+  .cta-description {
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+  }
+  .contact-link {
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+  }
+}
+
+@media (min-width: 2000px) {
+  .cta-content {
+    max-width: 1600px;
+  }
+  .cta-image-section {
+    height: 500px;
+  }
+  .cta-title {
+    font-size: clamp(2.2rem, 4vw, 3rem);
+  }
+  .cta-description {
+    font-size: clamp(1.1rem, 1.5vw, 1.4rem);
+  }
+  .contact-link {
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+  }
+}
+
+@media (min-width: 3840px) {
+  .cta-content {
+    max-width: 2000px;
+  }
+  .cta-image-section {
+    height: 600px;
+  }
+  .cta-title {
+    font-size: clamp(2.5rem, 4vw, 4rem);
+  }
+  .cta-description {
+    font-size: clamp(1.2rem, 1.5vw, 1.8rem);
+  }
+  .contact-link {
+    font-size: clamp(1.4rem, 2vw, 2rem);
+  }
+  .card-content h3 {
+    font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+  }
+}
+
+@media (max-width: 479px) {
+  .contact-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .card-icon {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
