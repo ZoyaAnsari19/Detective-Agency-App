@@ -219,13 +219,13 @@ const Description = () => {
       {/* 🔹 CardSwap Animation with images */}
       <CardSwap>
         <Card style={{ background: "linear-gradient(135deg, #003366, #0066cc)" }}>
-          <img src="src/assets/img/img5.png" alt="Detective Image 1" />
+          <img src="/img/img5.png" alt="Detective Image 1" />
         </Card>
         <Card style={{ background: "linear-gradient(135deg, #004080, #0099ff)" }}>
-          <img src="src/assets/img/img6.png" alt="Detective Image 2" />
+          <img src="/img/img6.png" alt="Detective Image 2" />
         </Card>
         <Card style={{ background: "linear-gradient(135deg, #002244, #00bfff)" }}>
-          <img src="src/assets/img/img7.png" alt="Detective Image 3" />
+          <img src="/img/img7.png" alt="Detective Image 3" />
         </Card>
       </CardSwap>
 

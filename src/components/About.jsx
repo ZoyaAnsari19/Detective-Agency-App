@@ -127,7 +127,7 @@ const About = () => {
           {/* 🖼️ Right Image */}
           <div className={`about-image ${isVisible ? 'fade-in' : ''}`}>
             <img
-              src="src/assets/img/img4.png"
+              src="/img/img4.png"
               alt="Missing Person Poster"
               className="missing-image"
             />

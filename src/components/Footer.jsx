@@ -34,7 +34,7 @@ const Footer = () => {
             <div className="map-container">
               <a href="https://www.google.com/maps?ll=19.125581,72.856577&z=15&t=m&hl=en&gl=IN&mapclient=embed&cid=11251639628179170974" target="_blank" rel="noopener noreferrer">
                 <img 
-                  src="src/assets/img/map.png" 
+                  src="/img/map.png" 
                   alt="Office Location Map" 
                   className="map-image" 
                 />

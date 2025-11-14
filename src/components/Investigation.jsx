@@ -1,15 +1,15 @@
-import investigationImg from '../assets/img/investigation.png'
+
 import './styles/investigaion.css'
 
 const Investigation = () => {
   return (
     <section className="cta-section" id='investigation'>
-      <img src={investigationImg} alt="Investigation background" className="cta-bg-image" />
+      <img src='/img/investigation.png' alt="Investigation background" className="cta-bg-image" />
       <div className="cta-overlay"></div>
 
       <div className="cta-content">
         <div className="cta-image-section">
-          <img src={investigationImg} alt="Professional Investigation Services" />
+          <img src='/img/investigation.png' alt="Professional Investigation Services" />
         </div>
 
         <div className="cta-text">

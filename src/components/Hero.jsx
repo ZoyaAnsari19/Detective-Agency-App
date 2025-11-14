@@ -63,13 +63,13 @@ const Hero = () => {
         <div className="right">
           <div className="image-grid">
             <div className="image-card image-card-1">
-              <img src="src/assets/img/img1.png" alt="Detective in rain" />
+              <img src="/img/img1.png" alt="Detective in rain" />
             </div>
             <div className="image-card image-card-2">
-              <img src="src/assets/img/img2.png" alt="Investigation tools" />
+              <img src="/img/img2.png" alt="Investigation tools" />
             </div>
             <div className="image-card image-card-3">
-              <img src="src/assets/img/img3.png" alt="Female detective" />
+              <img src="/img/img3.png" alt="Female detective" />
             </div>
           </div>
         </div>
